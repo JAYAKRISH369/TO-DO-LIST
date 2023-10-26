@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #calender::before{
+background-image: url("/styles/calender.png");
+width: 20px;
+height: 20px;
+}
+#top-div ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+#top-div li{
+    list-style-type: none;
+}
+#top-div a{
+    text-decoration: none;
+}
+#display-div{
+    background-color: aquamarine;
+    border-radius: 20px;
+}
+#display-div h1{
+    font-size: 32px;
+    padding-inline: 20px;
+}
+#sec1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+    <div id="top-div">
+        <ul>
+            <li> <a href="/"><i id="calender" ></i> Today </a></li>
+            <li> <a href="/work"><i id="" ></i> Work </a></li>
+        </ul>
+    </div>
+    <section id="sec1">
+    <div id="display-div">
+        <h1>
+     <%=v2%>, <%=v1%> <%=d%>
+    </h1>
+    </div>
+</section>
+</body>
+</html>

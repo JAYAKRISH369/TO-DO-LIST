@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="To-do-list/public/styles/main.css">
+    <title>To-Do-list..</title>
+    <style>
+
+#checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#checkbox-div{
+    min-width: 600px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+#form button{
+background-color: aqua;
+border-radius: 50%;
+columns: white;
+}
+.item p{
+    display: inline;
+}
+    </style>
+</head>
+<body>
+    
+<%-include("data.ejs")%>
+<section id="checkbox">
+    <div id="checkbox-div">
+        <div class="item"><input type="checkbox" class="check"><p>hello</p></div>
+        <div class="item"><input type="checkbox" class="check"><p></p></div>
+        <div class="item"><input type="checkbox" class="check"><p>welcom to the To-do-list</p></div>
+        <div class="item"><input type="checkbox" class="check"><p></p></div>
+        <div class="item"><input type="checkbox" class="check"><p></p></div>
+        <div class="item"><input type="checkbox" class="check"><p></p></div>
+            <%items.forEach(function(item){%>
+                <div class="item"><input type="checkbox" class="check"><p> <%=item%> </p></div>
+           <% });%>
+        <form action="/" method="post" id="form">
+            <input type="text" name="newitem" id="" placeholeder="new item">
+            <button type="submit">+</button>
+        </form>
+    </div>
+</section>
+
+<script>
+   
+</script>
+</body>
+</html>
